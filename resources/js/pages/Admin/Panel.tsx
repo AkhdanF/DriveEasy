@@ -1,8 +1,6 @@
-// resources/js/Pages/Admin/Panel.tsx
-import React from 'react';
-import { Head } from '@inertiajs/react';
+
 import AuthenticatedLayout from '@/layouts/AuthenticatedLayout';
-import { User, SharedData } from '@/types';
+import { User } from '@/types';
 
 interface AdminPanelProps {
     auth: {

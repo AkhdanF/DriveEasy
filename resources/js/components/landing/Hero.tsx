@@ -53,17 +53,12 @@ export default function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4">
             <Link
-              href="#book-now"
+              href={route('login')}
               className="rounded-lg bg-[#FF6B35] px-8 py-4 text-white font-semibold transition-all duration-300 hover:bg-[#e05222] hover:scale-105"
             >
-              Book Now
+              Get Started Now
             </Link>
-            <Link
-              href="#fleet"
-              className="rounded-lg border border-gray-400 px-8 py-4 text-white font-semibold transition-all duration-300 hover:border-[#FF6B35] hover:text-[#FF6B35] hover:scale-105"
-            >
-              Explore Fleet
-            </Link>
+            
           </div>
 
           {/* Stats */}
@@ -89,7 +84,7 @@ export default function Hero() {
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
           ref={carouselRef}
-        >
+          >
           <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-[#FF6B35]/10 rounded-3xl"></div>
           <div className="relative p-4 overflow-hidden">
             {/* Carousel container */}

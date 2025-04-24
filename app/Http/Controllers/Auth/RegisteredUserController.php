@@ -52,9 +52,11 @@ class RegisteredUserController extends Controller
 
     // Redirect based on role
     if ($user->role === 'admin') {
-        return to_route('admin.panel');
+        \Log::info('Admin user - redirecting to admin panel');
+        return redirect()->route('admin.index');
+    } else {
+        \Log::info('Regular user - redirecting to dashboard');
+        return redirect()->route('dashboard');
     }
-
-    return to_route('dashboard');
 }
 }

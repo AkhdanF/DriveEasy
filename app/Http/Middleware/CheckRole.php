@@ -11,7 +11,7 @@ class CheckRole
     public function handle(Request $request, Closure $next, $role): Response
     {
         if (!$request->user() || $request->user()->role !== $role) {
-            return redirect()->route('dashboard');
+            return redirect()->route('Panel.index')->with('error', 'You do not have permission to access this page.');
         }
 
         return $next($request);
